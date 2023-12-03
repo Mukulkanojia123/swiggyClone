@@ -1,6 +1,7 @@
 import React ,{useState , useEffect}from 'react'
 import RestaurantsCards from './RestaurantsCards';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const Body = () => {
@@ -9,12 +10,19 @@ const Body = () => {
     const dropDown = useSelector(store => store.dropDown.text);
       console.log(dropDown)
 
-    const fetchResdata = async() =>{
+    const fetchResdata = async(page) =>{
       const data = await fetch(`https://swiggy-clone-wjqx.onrender.com/api/v1/restaurant?location=${dropDown}&page=${page}`);
       const json = await data.json();
       console.log(json.data);
+
+      if (page === 0) {
+        setResData(json?.data); // Reset the state with new city data
+       
+      } else {
+        setResData((prevData) => [...prevData, ...json?.data]); // Append new page data to existing data
+      }
      // new data with old one
-        setResData((prevData) => [...prevData, ...json?.data]);
+        // setResData((prevData) => [...prevData, ...json?.data]);
       
       
     }
@@ -56,7 +64,9 @@ const Body = () => {
       <div className='flex flex-wrap justify-center w-[1000px]'>
      {
       resData?.map((card,index)=>(
+        <Link to={`restaurant/${card.info.id}`}>
         <RestaurantsCards key={index} card={card}/>
+        </Link>
       ))
       
     } 

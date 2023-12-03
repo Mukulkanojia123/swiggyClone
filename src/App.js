@@ -5,6 +5,7 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import store from './utils/redux/Store';
 import { Provider } from 'react-redux';
 import Body from './conponents/Body';
+import RestaurantMenu from './conponents/RestaurantMenu';
 
 const approuter = createBrowserRouter([
   {
@@ -14,7 +15,15 @@ const approuter = createBrowserRouter([
       {
         path : '/',
         element : <Body/>
-      }
+      },
+      {
+       path : 'restaurant/:resId',
+       element:<RestaurantMenu/> 
+      },
+      // {
+      //     path : 'hello',
+      //     element : <RestaurantMenu/>
+      // }
     ]
   }
 ])

@@ -2,7 +2,7 @@ import React from 'react'
 import { IMG_LINK } from '../utils/imageLink';
 
 const RestaurantsCards = ({ card }) => {
-    // console.log(card);
+    console.log(card);
     return (
         <div className='w-[300px] h-[370px] m-3'>
             <div className='flex justify-center pt-4'>
