@@ -6,6 +6,7 @@ import store from './utils/redux/Store';
 import { Provider } from 'react-redux';
 import Body from './conponents/Body';
 import RestaurantMenu from './conponents/RestaurantMenu';
+import Cart from './conponents/Cart';
 
 const approuter = createBrowserRouter([
   {
@@ -20,10 +21,10 @@ const approuter = createBrowserRouter([
        path : 'restaurant/:resId',
        element:<RestaurantMenu/> 
       },
-      // {
-      //     path : 'hello',
-      //     element : <RestaurantMenu/>
-      // }
+      {
+          path : 'cart',
+          element : <Cart/>
+      }
     ]
   }
 ])

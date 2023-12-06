@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { IMG_LINK } from "../utils/imageLink";
 import { useDispatch } from "react-redux";
+import { addToCart,removeCart } from "../utils/redux/cartSlice";
 // import { addItem, removeItem } from "../utils/redux/cartSlice";
 // import { FaMinus, FaPlus } from "react-icons/fa";
 
@@ -12,23 +13,25 @@ const RestaurantMenuCards = (props) => {
 
   //disptaching an action in a button click function to add items in store
   //added tostify also
-//   function addFoodItems(data) {
-//     dispatch(addItem(data?.card?.info));
+  function addFoodItems(data) {
+    dispatch(addToCart(data?.card?.info));
+    console.log("added")
 //     toast.success("Item Added To Cart",{
 //       position: "top-left",
       
 //     });
-//   }
+  }
 
   //disptaching an action in a button click function to removeadd items in store
   //added tostify also
-//   function removeFoodItems() {
-//     dispatch(removeItem());
+  function removeFoodItems() {
+    dispatch(removeCart());
+    console.log('remove')
 //     toast.error("Item Removed From Cart",{
 //       position: "top-left"
       
 //     });
-//   }
+  }
 
   return (
     <div>
@@ -59,22 +62,22 @@ const RestaurantMenuCards = (props) => {
                   </p>
                 </div>
                 <div className="flex justify-center items-center">
-                  {/* <button
+                  <button
                     onClick={() => removeFoodItems(itemCard)}
                     className="border border-orange-500 rounded-full p-1 m-1 hover:shadow-xl"
-                  >
-                    <FaMinus />
-                  </button> */}
+                  > -
+                    {/* <FaMinus /> */}
+                  </button>
                   <img
                     className="w-32"
                     src={IMG_LINK + itemCard.card.info.imageId}
                   />
-                  {/* <button
+                  <button
                     onClick={() => addFoodItems(itemCard)}
                     className=" border border-orange-500 rounded-full p-1 m-1 hover:shadow-xl "
-                  >
-                    <FaPlus />
-                  </button> */}
+                  > +
+                    {/* <FaPlus /> */}
+                  </button>
                 </div>
               </div>
               <hr></hr>

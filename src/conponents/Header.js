@@ -1,6 +1,7 @@
 import React ,{useState,useEffect}from 'react';
 import { useDispatch } from 'react-redux';
 import { dropDownText } from '../utils/redux/dropDownSlice';
+import { Link } from 'react-router-dom';
 
 const Header = ()=>{
     const [dropDown , setDropdown] = useState('delhi');
@@ -31,7 +32,7 @@ const Header = ()=>{
             <div className='flex'>
                 <div className='mr-6'>search</div>
                 <div className='mr-6'>login</div>
-                <div className='mr-6'>Cart</div>
+                <div className='mr-6'><Link to={'cart'}>Cart</Link></div>
                 <div className='mr-6'>Offers</div>
             </div>
         </div>
