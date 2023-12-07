@@ -16,7 +16,7 @@ const Header = ()=>{
             // console.log(e.target.value);
     }
     return (
-        <div className='sticky z-100 flex top-0 right-0 left-0 justify-around items-center p-4 bg-white border border-bottom border-gray-50'>
+        <div className='sticky z-1000 flex top-0 right-0 left-0 justify-around items-center p-4 bg-white border border-bottom border-gray-50'>
             <div className='flex'>
                 
                     <img className='w-8 mr-8'

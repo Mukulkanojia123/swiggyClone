@@ -4,9 +4,9 @@ import { IMG_LINK } from '../utils/imageLink';
 const RestaurantsCards = ({ card }) => {
     // console.log(card);
     return (
-        <div className='w-[300px] h-[370px] m-3'>
+        <div className='w-[300px] h-[370px] m-3 rounded-lg shadow-lg hover:shadow-xl'>
             <div className='flex justify-center pt-4'>
-                <img className='w-[250px] h-[200px]'
+                <img className='w-[250px] h-[200px] rounded-lg'
                     src={IMG_LINK + card?.info?.cloudinaryImageId} />
             </div>
             <div className='px-5'>

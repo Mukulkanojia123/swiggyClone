@@ -2,6 +2,7 @@ import React ,{useState , useEffect}from 'react'
 import RestaurantsCards from './RestaurantsCards';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Carausel from './Carausel';
 
 
 const Body = () => {
@@ -60,6 +61,7 @@ const Body = () => {
    }
   return (
     <div>
+      <Carausel/>
     <div className='flex justify-center'>
       <div className='flex flex-wrap justify-center w-[1000px]'>
      {
