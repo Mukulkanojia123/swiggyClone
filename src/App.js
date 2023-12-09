@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import Body from './conponents/Body';
 import RestaurantMenu from './conponents/RestaurantMenu';
 import Cart from './conponents/Cart';
+import SearchPage from './conponents/SearchPage';
 
 const approuter = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const approuter = createBrowserRouter([
       {
           path : 'cart',
           element : <Cart/>
+      },
+      {
+        path : '/search',
+        element : <SearchPage/>
       }
     ]
   }

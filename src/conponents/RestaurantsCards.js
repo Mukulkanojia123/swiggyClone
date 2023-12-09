@@ -7,7 +7,8 @@ const RestaurantsCards = ({ card }) => {
         <div className='w-[300px] h-[370px] m-3 rounded-lg shadow-lg hover:shadow-xl'>
             <div className='flex justify-center pt-4'>
                 <img className='w-[250px] h-[200px] rounded-lg'
-                    src={IMG_LINK + card?.info?.cloudinaryImageId} />
+                    src={IMG_LINK + card?.info?.cloudinaryImageId} 
+                    />
             </div>
             <div className='px-5'>
                 <h1 className='p-2 font-semibold text-base'>{card?.info?.name}</h1>

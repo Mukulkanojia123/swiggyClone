@@ -3,6 +3,7 @@ import RestaurantsCards from './RestaurantsCards';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Carausel from './Carausel';
+import DishesWaterMark from './DishesWaterMark';
 
 
 const Body = () => {
@@ -62,7 +63,11 @@ const Body = () => {
   return (
     <div>
       <Carausel/>
+     <DishesWaterMark/>
+
     <div className='flex justify-center'>
+      <div>
+      <div className='flex justify-around text-3xl font-bold text-gray-500 '>Restaurants</div>
       <div className='flex flex-wrap justify-center w-[1000px]'>
      {
       resData?.map((card,index)=>(
@@ -73,7 +78,7 @@ const Body = () => {
       
     } 
     </div>
-    
+    </div>
     </div>
     </div>
   )
